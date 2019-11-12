@@ -229,6 +229,268 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/dk2zj_blog/2019/11/12/java-util-concurrent分享/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhongji">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/12/java-util-concurrent分享/" itemprop="url">java.util.concurrent分享</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-12T09:05:00+08:00">
+                2019-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="java-util-concurrent"><a href="#java-util-concurrent" class="headerlink" title="java.util.concurrent"></a>java.util.concurrent</h1><h2 id="JAVA-内存模型"><a href="#JAVA-内存模型" class="headerlink" title="JAVA 内存模型"></a>JAVA 内存模型</h2><p>通过内存屏障实现的可见性和禁止重排序。不同硬件实现内存屏障的方式不同，Java内存模型屏蔽了这些差异，由JVM来为不同的平台生成相应的机器码来完成。</p>
+<blockquote>
+<p><a href="http://www.java1234.com/a/javabook/javabase/2014/0910/2853.html" target="_blank" rel="noopener">《深入理解Java虚拟机：JVM高级特性与最佳实践（第2版)》</a></p>
+</blockquote>
+<h2 id="JAVA-先行发生原则（Happens-Before）"><a href="#JAVA-先行发生原则（Happens-Before）" class="headerlink" title="JAVA 先行发生原则（Happens-Before）"></a>JAVA 先行发生原则（Happens-Before）</h2><ul>
+<li>单线程happen-before原则：在同一个线程中，书写在前面的操作happen-before后面的操作。</li>
+<li>锁的happen-before原则：同一个锁的unlock操作happen-before此锁的lock操作。</li>
+<li>volatile的happen-before原则：对一个volatile变量的写操作happen-before对此变量的任意操作(当然也包括写操作了)。</li>
+<li>happen-before的传递性原则：如果A操作 happen-before B操作，B操作happen-before C操作，那么A操作happen-before C操作。</li>
+<li>线程启动的happen-before原则：同一个线程的start方法happen-before此线程的其它方法。</li>
+<li>线程中断的happen-before原则：对线程interrupt方法的调用happen-before被中断线程的检测到中断发送的代码。</li>
+<li>线程终结的happen-before原则：线程中的所有操作都happen-before线程的终止检测。</li>
+<li>对象创建的happen-before原则：一个对象的初始化完成先于他的finalize方法调用。</li>
+</ul>
+<h2 id="java-util-concurrent-1"><a href="#java-util-concurrent-1" class="headerlink" title="java.util.concurrent"></a>java.util.concurrent</h2><h4 id="AQS-双向链表的FIFO队列"><a href="#AQS-双向链表的FIFO队列" class="headerlink" title="AQS 双向链表的FIFO队列"></a>AQS 双向链表的FIFO队列</h4><p>state<br>fifo queue</p>
+<blockquote>
+<p><a href="http://gee.cs.oswego.edu/dl/papers/aqs.pdf" target="_blank" rel="noopener">The java.util.concurrent Synchronizer Framework - Doug Lea</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/da9d051dcc3d" target="_blank" rel="noopener">Java技术之AQS详解</a></p>
+</blockquote>
+<h4 id="并发-colleciton"><a href="#并发-colleciton" class="headerlink" title="并发 colleciton"></a>并发 colleciton</h4><p><img src="https://img3.mukewang.com/5b7fe62f0001865512840784.jpg" alt></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/dk2zj_blog/2019/08/22/3巨头之一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhongji">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/22/3巨头之一/" itemprop="url">3巨头之一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-22T10:36:32+08:00">
+                2019-08-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="3巨头之一"><a href="#3巨头之一" class="headerlink" title="3巨头之一"></a>3巨头之一</h1><hr>
+<p>问：消息队列 用的啥，ac机制（ack），怎么创建一个尽可能大的队列。<br>问：消息队列穿插 线程池怎么创建，如何创建一个无穷大的线程，线程池核心参数，拒绝策略<br>问：自我介绍，印象最深的项目，生产中遇到的问题<br>问：索引有哪些，怎么提高查询性能，组合索引怎么样才能用到</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/dk2zj_blog/2019/08/19/mysql-一問一答/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -987,7 +1249,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
